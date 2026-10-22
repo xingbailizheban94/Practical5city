@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- 城市主题色 -->
+    <color name="municipality_beijing">#E53935</color> <!-- Red -->
+    <color name="municipality_shanghai">#D81B60</color> <!-- Magenta -->
+    <color name="municipality_tianjin">#37474F</color> <!-- Charcoal -->
+    <color name="municipality_chongqing">#F57C00</color> <!-- Bright orange -->
+
+    <!-- 文字颜色 -->
+    <color name="color_textlight">#FFFFFF</color>
+    <color name="color_textdark">#212121</color>
+
+    <!-- 默认背景色 -->
+    <color name="color_defaultbackground">#F5F5F5</color>
 </resources>
