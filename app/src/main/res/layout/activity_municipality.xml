@@ -2,9 +2,70 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_defaultbackground"
+    android:padding="16dp"
     tools:context=".Municipality">
+
+    <!-- 顶部：城市名字 -->
+    <TextView
+        android:id="@+id/tvCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="City Name"
+        android:textAlignment="center"
+        android:textColor="@color/color_textlight"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 中间的图片 -->
+    <ImageView
+        android:id="@+id/ivCityImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCityName"
+        tools:src="@drawable/beijing" />
+
+    <!-- 城市简介（使用 ScrollView 包裹，防止文字太长超出屏幕） -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVisitSite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCityImage">
+
+        <TextView
+            android:id="@+id/tvCityInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Information goes here..."
+            android:textColor="@color/color_textdark"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <!-- 底部：Visit site 按钮 -->
+    <Button
+        android:id="@+id/btnVisitSite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="Visit site"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
